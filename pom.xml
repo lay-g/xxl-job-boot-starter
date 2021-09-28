@@ -50,4 +50,51 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 项目发布地址 -->
+    <distributionManagement>
+        <repository>
+            <id>lay-releases</id>
+            <name>nexus release repository</name>
+            <url>https://maven.layweb.org/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>lay-snapshots</id>
+            <name>nexus snapshot repository</name>
+            <url>https://maven.layweb.org/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- 仓库地址 -->
+    <repositories>
+        <repository>
+            <id>lay-public</id>
+            <name>lay-public</name>
+            <url>https://maven.layweb.org/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
