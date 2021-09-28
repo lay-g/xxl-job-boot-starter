@@ -1,0 +1,12 @@
+### macOS template
+# General
+.DS_Store
+
+.idea/
+*.iml
+target/
+*.class
+*.jar
+
+out/
+
